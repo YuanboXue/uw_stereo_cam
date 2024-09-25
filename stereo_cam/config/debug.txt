@@ -1,0 +1,12 @@
+rosrun kalibr kalibr_calibrate_cameras --bag /data/uw_cam.bag --target /data/april_6x6.yaml --models pinhole-radtan pinhole-radtan --topics /color_left /color_right --show-extraction
+
+rosrun topic_tools throttle messages /camera/color/image_raw 4 /color
+
+rosrun rqt_image_view rqt_image_view
+
+https://github.com/ethz-asl/kalibr/wiki/installation
+
+https://blog.csdn.net/weixin_61052385/article/details/125169534
+
+
+rosrun kalibr kalibr_calibrate_cameras --bag /data/uw_cam.bag --target /data/april_6x6.yaml --models pinhole-radtan --topics /color --show-extraction
